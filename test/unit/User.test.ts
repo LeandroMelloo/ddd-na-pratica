@@ -16,23 +16,23 @@ test("Deve criar um usuário", () => {
 test("Não deve criar um usuário com o nome inválido", () => {
   expect(
     () => new User("Leandro", "leandromello@gmail.com", "12345678", 37)
-  ).toThrow(new Error("Invalid name"));
+  ).toThrow(new Error("Invalid parameter"));
 });
 
 test("Não deve criar um usuário com o email inválido", () => {
   expect(
     () => new User("Leandro Mello", "leandromello@gmail", "12345678", 37)
-  ).toThrow(new Error("Invalid email"));
+  ).toThrow(new Error("Invalid parameter"));
 });
 
 test("Não deve criar um usuário com o password inválido", () => {
   expect(
     () => new User("Leandro Mello", "leandromello@gmail.com", "123456", 37)
-  ).toThrow(new Error("Invalid password"));
+  ).toThrow(new Error("Invalid parameter"));
 });
 
 test("Não deve criar um usuário com a idade inválida", () => {
   expect(
     () => new User("Leandro Mello", "leandromello@gmail.com", "12345678", 17)
-  ).toThrow(new Error("Invalid age"));
+  ).toThrow(new Error("Invalid parameter"));
 });
